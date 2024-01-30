@@ -34,12 +34,12 @@ function App() {
       <h1 className="text-3xl text-center font-bold mb-8">Dashboard</h1>
       <div className="flex flex-col items-center gap-4">
         {socials.map((s, i) => (
-          <Suspense fallback={<Skeleton />}>
+          <Suspense key={i} fallback={<Skeleton />}>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0, rotate: 0 }}
             >
-              <DashboardCard key={i} icon={s.icon} name={s.name} />
+              <DashboardCard icon={s.icon} name={s.name} />
             </motion.div>
           </Suspense>
         ))}
