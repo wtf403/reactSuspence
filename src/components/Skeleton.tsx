@@ -1,6 +1,7 @@
+import Base from "@/components/Base";
 const Skeleton = () => {
   return (
-    <>
+    <Base>
       <div className="loader w-[256px] h-[97px] bg-gray-50 rounded-xl "></div>
       <style>{`
             .loader{
@@ -18,7 +19,7 @@ const Skeleton = () => {
               }
             }
         `}</style>
-    </>
+    </Base>
   );
 };
 

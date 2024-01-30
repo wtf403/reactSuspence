@@ -18,9 +18,10 @@ const DashboardCard = ({ icon, name }: { icon: string; name: string }) => {
             setTimeout(() => resolve(data), data.delay)
           )
       )
+      .catch((err) => {
+        throw new Error(err);
+      })
   );
-
-  console.log(data);
 
   return (
     <div className="w-64 border rounded-xl shadow-xl p-4 bg-white flex gap-3">
@@ -29,7 +30,7 @@ const DashboardCard = ({ icon, name }: { icon: string; name: string }) => {
         <h3 className="font-medium text-gray-400">Followers</h3>
         <div className="flex gap-2 items-end">
           <p className="text-2xl font-bold">{data?.followers ?? "–"}</p>
-          <p className="text-green-500 font-bold">💚 {data?.new ?? "–"}</p>
+          <p className="text-green-500 font-bold">↗️ {data?.new ?? "–"}</p>
         </div>
       </div>
     </div>
