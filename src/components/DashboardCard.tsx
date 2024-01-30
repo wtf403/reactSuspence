@@ -10,7 +10,7 @@ type ApiResponse = {
 
 const DashboardCard = ({ icon, name }: { icon: string; name: string }) => {
   const data = use(
-    fetch(`/src/assets/api/${name}.json`)
+    fetch(`${name}.json`)
       .then((res) => res.json())
       .then(
         (data) =>

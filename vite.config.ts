@@ -9,4 +9,5 @@ export default defineConfig({
       '@': '/src'
     }
   },
+  base: "https://wtf403.github.io/reactSuspense/",
 })

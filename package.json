@@ -28,5 +28,6 @@
     "framer-motion": "^11.0.3",
     "react": "^18.3.0-canary-971b62f47-20240129",
     "react-dom": "^18.3.0-canary-971b62f47-20240129"
-  }
+  },
+  "homepage": "https://wtf403.github.io/reactSuspense/"
 }
